@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class UserController extends Controller
 {
-    public function index() {
-        return DB::table('Users')->where('id','<=',1)->get();
+    public function index()
+    {
+        return 1;
     }
 }
