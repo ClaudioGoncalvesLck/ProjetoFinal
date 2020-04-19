@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
 
-    public function Plano(){
-        return $this->hasMany('App\Models\Plano');
+    public function planos(){
+        return $this->belongsToMany('App\Models\Plano');
     } 
 }

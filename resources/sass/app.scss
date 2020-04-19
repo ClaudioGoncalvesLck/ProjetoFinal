@@ -1,8 +1,25 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.plano-item {
+    border: 1px solid black;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.main-item {
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    h1 {
+        margin-bottom: 50px;
+    }
+}

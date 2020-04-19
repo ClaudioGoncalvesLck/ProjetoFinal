@@ -3,8 +3,7 @@
 @section('content')
     <div class="table">
         <p>
-            {{ Auth::user()->name }}
-            
+           Olá {{ Auth::user()->name }}
         </p>
     </div>
 @endsection
