@@ -4,8 +4,7 @@
     <div class="table">
         <p>
             {{ Auth::user()->name }}
-        </p>
-        <p>
+            
         </p>
     </div>
 @endsection
