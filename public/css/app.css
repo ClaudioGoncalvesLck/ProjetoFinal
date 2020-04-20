@@ -10882,21 +10882,43 @@ a.text-dark:focus {
   }
 }
 
+.main-item,
 .plano-item {
   border: 1px solid black;
-  text-align: left;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.main-item {
-  border: 1px solid black;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 20px;
+  box-shadow: 0px 6px 25px -10px rgba(0, 0, 0, 0.55);
 }
 
-.main-item h1 {
+.main-item h1,
+.plano-item h1 {
   margin-bottom: 50px;
+}
+
+.nav-custom {
+  background: #4089fb;
+  background: radial-gradient(circle, #4089fb 0%, #1873f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4089fb",endColorstr="#1873f7",GradientType=1);
+}
+
+.nav-custom i {
+  margin-right: 5px;
+}
+
+.nav-custom p,
+.nav-custom h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-custom h1 {
+  font-size: 18px;
+}
+
+.nav-custom p,
+.nav-custom i,
+.nav-custom h1 {
+  vertical-align: middle;
 }
 
