@@ -15,9 +15,10 @@
                 <div class="col-md-6 col-sm-12 col-lg-4">
                     <div class="plano-item">
                         <h1 class="text-uppercase font-weight-bold  text-center">{{ $plano->name }}</h1>   
-                        <p >Preço original: <del>{{ $plano->original_price }}</del></p>
+                        <p>Preço original: <del>{{ $plano->original_price }}</del></p>
                         <p>Desconto: {{ $plano->discount_price }}</p>  
-                        <p>Duração: {{ $plano->duration }} meses</p> 
+                        <p style="margin-bottom: 50px">Duração: {{ $plano->duration }} meses</p> 
+                        <a href="" class="btn btn-primary">Choose</a>
                     </div>
                 </div>
             @endforeach

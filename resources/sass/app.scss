@@ -57,3 +57,23 @@
         vertical-align: middle;
     }
 }
+
+.col-reset {
+    padding: 0;
+}
+.home-bar {
+    padding: 15px;
+    height: calc(100vh - 100px);
+    position: fixed;
+    border-right: 5px solid #4089fb;
+
+    .user-circle {
+        background: url;
+    }
+}
+
+.home-nav {
+    a {
+        display: inline-block;
+    }
+}

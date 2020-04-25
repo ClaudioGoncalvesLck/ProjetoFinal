@@ -12,7 +12,7 @@ class PlanoController extends Controller
 {
     public function index() 
     {
-        return view('pages/planos', ['planos' => Plano::all(), 'users' => User::all()]);    
+        return view('pages.planos', ['planos' => Plano::all(), 'users' => User::all()]);    
     }
     
 }
