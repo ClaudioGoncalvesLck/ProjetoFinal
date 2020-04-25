@@ -17,7 +17,7 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('email')
+                                @error('email') 
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
@@ -64,6 +64,15 @@
                                 @endif
                             </div>
                         </div>
+
+                        {{-- <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <p style="padding:0.375rem 0.75rem" class="d-inline-block">Don't have an account?</p>
+                                <a href="/register" class="btn btn-primary">
+                                    Register
+                                </a>
+                            </div>
+                        </div> --}}
                     </form>
                 </div>
             </div>
