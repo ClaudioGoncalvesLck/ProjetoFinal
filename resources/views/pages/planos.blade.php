@@ -18,7 +18,11 @@
                         <p>Preço original: <del>{{ $plano->original_price }}</del></p>
                         <p>Desconto: {{ $plano->discount_price }}</p>  
                         <p style="margin-bottom: 50px">Duração: {{ $plano->duration }} meses</p> 
-                        <a href="/checkout" class="btn btn-primary">Choose</a>
+                        <form action="checkout" method="post">
+                            @csrf
+                            <button action="" class="btn btn-primary">Choose</button>
+                        </form>
+                        {{-- <a href="planos/checkout" class="btn btn-primary">Choose</a> --}}
                     </div>
                 </div>
             @endforeach

@@ -20,7 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/users', 'UserController@index');
+
 Route::get('/planos', 'PlanoController@index');
-Route::get('/checkout', 'CheckoutController@index');
+
+Route::get('planos/checkout', 'PlanoController@checkout')->middleware('auth');
 

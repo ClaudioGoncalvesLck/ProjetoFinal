@@ -57,7 +57,7 @@
                             @endif
                         @else
                             <a class="nav-link" href="/home" >
-                                Home
+                                Dashboard
                             </a>
                             <li class="nav-item dropdown home-nav">
                                 

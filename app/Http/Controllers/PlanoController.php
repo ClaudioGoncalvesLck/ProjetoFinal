@@ -15,4 +15,8 @@ class PlanoController extends Controller
         return view('pages.planos', ['planos' => Plano::all(), 'users' => User::all()]);    
     }
     
+
+    public function checkout() {
+        return view ('pages.checkout');
+    }
 }
