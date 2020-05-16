@@ -32,6 +32,7 @@ class HomeController extends Controller
         $userid = Auth::id();
 
         return view('pages.home', ['users' => User::with('planos')->where('id', $userid)->get()]);
+
     }
 
 

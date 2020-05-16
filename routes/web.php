@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    return view('welcome');
+        return view('welcome');
 });
 
 Auth::routes();
@@ -25,5 +25,6 @@ Route::get('/users', 'UserController@index');
 
 Route::get('/planos', 'PlanoController@index');
 
-Route::get('planos/checkout', 'PlanoController@checkout')->middleware('auth');
+Route::post('/checkout', 'PlanoController@addPlan');
 
+Route::post('/plan/remove', 'PlanoController@removePlan');

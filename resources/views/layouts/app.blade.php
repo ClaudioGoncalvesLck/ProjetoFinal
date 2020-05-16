@@ -21,10 +21,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <div class="gradient"></div>
     <div id="app">
-        <nav id="nav_id" class="navbar navbar-expand-md navbar-dark nav-custom shadow-sm">
+        <nav id="nav_id" class="navbar navbar-expand-md navbar-dark nav-custom">
             <div class="container">
-                 
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fab fa-laravel"></i>
                     <h1>
@@ -73,7 +73,7 @@
                                         </p>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>

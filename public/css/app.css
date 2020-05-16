@@ -10884,7 +10884,6 @@ a.text-dark:focus {
 
 .main-item,
 .plano-item {
-  border: 1px solid black;
   text-align: center;
   padding: 30px;
   margin-bottom: 20px;
@@ -10894,12 +10893,18 @@ a.text-dark:focus {
 .main-item h1,
 .plano-item h1 {
   margin-bottom: 50px;
+  color: #ffff;
 }
 
-.nav-custom {
-  background: #4089fb;
-  background: radial-gradient(circle, #4089fb 0%, #1873f7 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4089fb",endColorstr="#1873f7",GradientType=1);
+.nav-custom .nav-item,
+.nav-custom .nav-link,
+.nav-custom a,
+.nav-custom i {
+  color: #ffff !important;
+}
+
+.nav-custom a {
+  color: black;
 }
 
 .nav-custom i {
@@ -10926,18 +10931,55 @@ a.text-dark:focus {
   padding: 0;
 }
 
+.custom-card {
+  background: none;
+  border: none;
+  box-shadow: 0px 6px 25px -10px rgba(0, 0, 0, 0.55);
+}
+
+.custom-card p {
+  color: #ffff;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-card h5 {
+  color: #ffff;
+}
+
 .home-bar {
   padding: 15px;
   height: calc(100vh - 100px);
   position: fixed;
-  border-right: 5px solid #4089fb;
+  border-right: 5px solid #ffff;
+}
+
+.home-bar img {
+  width: 50px;
+  margin-bottom: 10px;
 }
 
 .home-bar .user-circle {
   background: url;
 }
 
+.home-bar p {
+  color: #ffff;
+  font-weight: bolder;
+}
+
 .home-nav a {
   display: inline-block;
+}
+
+.gradient {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  position: fixed;
+  z-index: -1;
+  background: #3a76b4;
+  background: linear-gradient(180deg, #3a76b4 0%, #f7f7f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a76b4",endColorstr="#f7f7f7",GradientType=1);
 }
 
