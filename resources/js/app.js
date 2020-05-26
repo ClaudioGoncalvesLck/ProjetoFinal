@@ -33,6 +33,16 @@ Vue.component(
 const app = new Vue({
     el: "#app"
 });
-// function getAltura() {
-//     var newAltura = calc(100vh - 1);
-// }
+
+$(function() {
+    var header = $(".navbar");
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    });
+});

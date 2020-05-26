@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,10 +21,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body>
-    <div class="gradient"></div>
     <div id="app">
-        <nav id="nav_id" class="navbar navbar-expand-md navbar-dark nav-custom">
+        <nav id="nav_id" class="navbar fixed-top navbar-expand-md navbar-dark nav-custom">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fab fa-laravel"></i>
@@ -31,7 +32,9 @@
                         {{ config('app.name', 'ProjetoFinal') }}
                     </h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -45,48 +48,52 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i><p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>
+                                <p>
                                     {{ __('Login') }}
-                                </p></a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-plus-circle"></i></i><p>{{ __('Register') }}</p></a>
-                                </li>
-                            @endif
-                        @else
-                            <a class="nav-link" href="/home" >
-                                Dashboard
+                                </p>
                             </a>
-                            <li class="nav-item dropdown home-nav">
-                                
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <i class="fas fa-sign-out-alt"></i><p>
-                                            {{ __('Logout') }}
-                                        </p>
-                                    </a>
+                        </li>
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-plus-circle"></i></i>
+                                <p>{{ __('Register') }}</p>
+                            </a>
+                        </li>
+                        @endif
+                        @else
+                        <a class="nav-link" href="/home">
+                            Dashboard
+                        </a>
+                        <li class="nav-item dropdown home-nav">
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <p>
+                                        {{ __('Logout') }}
+                                    </p>
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
+    @yield('content')
 </body>
+
 </html>
