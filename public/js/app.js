@@ -49805,7 +49805,7 @@ $(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 50) {
+    if (scroll >= 20) {
       header.addClass("scrolled");
     } else {
       header.removeClass("scrolled");
@@ -49947,8 +49947,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\claud\ProjetoFinal\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\claud\ProjetoFinal\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\lockre\Desktop\cenas\dev\escola\web2\ProjetoFinal\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\lockre\Desktop\cenas\dev\escola\web2\ProjetoFinal\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

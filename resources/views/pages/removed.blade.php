@@ -5,7 +5,6 @@
 <div class="container">
     <div class="col-md-6 offset-md-3 text-center">
         <h1 class="text-white">Plano removido com sucesso</h1>
-
     </div>
 </div>
 @endsection

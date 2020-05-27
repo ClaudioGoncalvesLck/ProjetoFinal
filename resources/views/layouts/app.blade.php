@@ -23,8 +23,8 @@
 </head>
 
 <body>
-    <div id="app">
-        <nav id="nav_id" class="navbar fixed-top navbar-expand-md navbar-dark nav-custom">
+    <div id="app" class="sticky-top">
+        <nav id="nav_id" class="navbar sticky-top navbar-expand-md navbar-dark nav-custom">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fab fa-laravel"></i>
@@ -72,9 +72,9 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-custom dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt"></i>
                                     <p>
                                         {{ __('Logout') }}

@@ -34,12 +34,12 @@ const app = new Vue({
     el: "#app"
 });
 
-$(function() {
+$(function () {
     var header = $(".navbar");
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 50) {
+        if (scroll >= 20) {
             header.addClass("scrolled");
         } else {
             header.removeClass("scrolled");
